@@ -1,0 +1,22 @@
+[package]
+name = "revi"
+version = "0.0.1"
+authors = ["cowboy8625 <cowboy8625@protonmail.com>"]
+edition = "2021"
+description = "A Vim/NeoVim Inspired Text Editor"
+readme = "README.md"
+repository = "https://github.com/revi-editor/revi"
+license-file = "LICENSE"
+keywords = ["text-editor", "command-line", "termainl", "vim", "configuration"]
+categories = ["text-editors", "text-processing", "command-line-utilities", "command-line-interface"]
+
+[dependencies]
+revi-ui = { path = "./crates/revi-ui" }
+revi-core = { path = "./crates/revi-core" }
+mlua = { version = "0.8.3", features = ["lua54", "vendored", "serialize", "macros"] }
+clap = "3.2.17"
+
+[workspace]
+
+members = ["./crates/*"]
+
